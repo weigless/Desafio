@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Desafio - Estágio Ribeirão Preto - 2024</title>
+</head>
+<body>
+
+<h1>Estágio Ribeirão Preto - 2024</h1>
+
+<p><strong>1) Observe o trecho de código abaixo:</strong></p>
+
+<pre><code>int INDICE = 13, SOMA = 0, K = 0; 
+enquanto K &lt; INDICE faça 
+{ 
+K = K + 1; 
+SOMA = SOMA + K; 
+} 
+imprimir(SOMA); 
+</code></pre>
+
+<p>Ao final do processamento, qual será o valor da variável SOMA?</p>
+
+<p><strong>Resposta:</strong> Ao executar esse código Python, obterá o resultado de SOMA: 91. Ele realiza a soma dos primeiros 13 números inteiros positivos.</p>
+
+<pre><code>indice= 13
+soma= 0
+k= 0
+
+while k &lt; indice:
+    k+=1
+    soma+=k
+print (soma)
+</code></pre>
+
+<p><strong>2) Dado a sequência de Fibonacci:</strong></p>
+
+<p>Escreva um programa na linguagem que desejar onde, informado um número, ele calcule a sequência de Fibonacci e retorne uma mensagem avisando se o número informado pertence ou não a sequência.</p>
+
+<p><strong>Resposta:</strong></p>
+
+<pre><code>def fibonacci_sequence(n):
+    n1, n2 = 0, 1
+
+    if n == n1 or n == n2:
+        return f"{n} pertence à sequência de Fibonacci."
+
+    while True:
+        nth = n1 + n2
+        if nth == n:
+            return f"{n} pertence à sequência de Fibonacci."
+        elif nth > n:
+            return f"{n} não pertence à sequência de Fibonacci."
+        n1, n2 = n2, nth
+
+try:
+    numero = int(input("Informe um número inteiro: "))
+    resultado = fibonacci_sequence(numero)
+    print(resultado)
+except ValueError:
+    print("Por favor, insira um número inteiro válido.")
+</code></pre>
+
+<p><strong>3) Descubra a lógica e complete o próximo elemento:</strong></p>
+
+<ul>
+  <li>a) 1, 3, 5, 7, 9</li>
+  <li>b) 2, 4, 8, 16, 32, 64, 128</li>
+  <li>c) 0, 1, 4, 9, 16, 25, 36, 49</li>
+  <li>d) 4, 16, 36, 64, 100</li>
+  <li>e) 1, 1, 2, 3, 5, 8, 13</li>
+  <li>f) 2, 10, 12, 16, 17, 18, 19, 200</li>
+</ul>
+
+<p><strong>4) Você está em uma sala com três interruptores:</strong></p>
+
+<p>Você não pode ver as lâmpadas da sala em que está, mas pode ligar e desligar os interruptores quantas vezes quiser. Seu objetivo é descobrir qual interruptor controla qual lâmpada. Como você faria para descobrir, usando apenas duas idas até uma das salas das lâmpadas, qual interruptor controla cada lâmpada?</p>
+
+<p><strong>Resposta:</strong> Para resolver esse problema, eu faria o seguinte: Na primeira ida, ligaria o interruptor A e deixaria ligado por alguns minutos. Em seguida, desligaria o interruptor A e ligaria o interruptor B. Na segunda ida, observaria as lâmpadas na sala: Se uma lâmpada estiver acesa, saberei que o interruptor A controla essa lâmpada. Se uma lâmpada estiver apagada, mas estiver quente, isso significa que o interruptor B controla essa lâmpada. E, se a última lâmpada estiver apagada e fria, concluirei que o interruptor C controla essa lâmpada. Dessa forma, em apenas duas idas à sala das lâmpadas, posso determinar qual interruptor controla cada uma delas.</p>
+
+<p><strong>5) Escreva um programa que inverta os caracteres de um string.</strong></p>
+
+<pre><code>def inverter_string(string):
+    string_invertida = ""
+    
+    for i in range(len(string) - 1, -1, -1):
+        string_invertida += string[i]
+    
+    return string_invertida
+
+texto_original = input("Digite uma string para inverter: ")
+texto_invertido = inverter_string(texto_original)
+print("String invertida:", texto_invertido)
+</code></pre>
+
+</body>
+</html>
